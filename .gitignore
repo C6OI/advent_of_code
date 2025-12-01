@@ -1,0 +1,9 @@
+# IDEs
+.idea
+.vscode
+
+# Build artifacts
+target
+
+# Inputs
+inputs
