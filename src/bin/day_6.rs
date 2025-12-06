@@ -15,12 +15,12 @@ fn part_1() -> i64 {
         let numbers = column
             .iter()
             .take(column.len() - 1)
-            .map(|value| value.parse::<i64>().unwrap());
+            .map(|value| value.trim().parse::<i64>().unwrap());
         let action = column.last().unwrap();
 
-        if action == "+" {
+        if action.trim() == "+" {
             res += numbers.sum::<i64>();
-        } else if action == "*" {
+        } else if action.trim() == "*" {
             res += numbers.product::<i64>()
         } else {
             panic!("Invalid action '{action}'")
